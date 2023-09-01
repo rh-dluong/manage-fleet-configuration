@@ -1,11 +1,13 @@
 
 # Note
 
-1. This simple channel-subscription deploys payload to the hub cluster. In this case the payload is a bunch of [policies](https://github.com/bjoydeep/fleet-configuration/tree/main). All the policies have their placements set to whereever they are needed to be deployed.
+1. This simple subscription deploys payload to the hub cluster. In this case the payload is a bunch of [policies](https://github.com/bjoydeep/fleet-configuration/tree/main). All the policies have their placements set to whereever they are needed to be deployed.
 1. Starting in 2.4 you need to be Subscription-Admin. One option is to execute: [community/CM-Configuration-Management/policy-configure-subscription-admin-hub](https://github.com/stolostron/policy-collection/blob/main/community/CM-Configuration-Management/policy-configure-subscription-admin-hub.yaml) from the command-line and set it to enforce. Or follow the `oc edit clusterrolebinding` shown below.
 1. This accompanying [repository](https://github.com/bjoydeep/fleet-configuration/tree/main) is used.
 
 ## Steps
+
+### If deploying into regular ACM hub (or managed hub if being managed from Global Hub)
 
 1. Log on to the cluster using oc login .
 
@@ -20,8 +22,8 @@
     ```
     subjects:
     - apiGroup: rbac.authorization.k8s.io
-    kind: User
-    name: kube:admin
+      kind: User
+      name: kube:admin
     ```  
 1. Then run 3 the scripts:
     ```
@@ -29,3 +31,4 @@
     kubectl apply -f channenl.yaml
     kubectl apply -f subscription.yaml
     ```
+### If deploying into Global Hub

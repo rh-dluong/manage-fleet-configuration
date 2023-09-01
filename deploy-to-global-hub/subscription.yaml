@@ -4,8 +4,14 @@ metadata:
   annotations:
     apps.open-cluster-management.io/git-branch: main
     apps.open-cluster-management.io/git-path: test
+    apps.open-cluster-management.io/reconcile-option: merge
+  labels:
+    app: app-for-policy-repo
   name: sub-for-policy-repo
+  namespace: policy-repo
 spec:
   channel: policy-repo/channel-for-policy-repo
   placement:
-    local: true
+    placementRef:
+      kind: Placement
+      name: placement-for-policy-repo    

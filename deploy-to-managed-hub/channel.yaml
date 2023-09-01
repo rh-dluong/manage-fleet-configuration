@@ -2,8 +2,9 @@ apiVersion: apps.open-cluster-management.io/v1
 kind: Channel
 metadata:
   name: channel-for-policy-repo
+  namespace: policy-repo
   annotations:
-    apps.open-cluster-management.io/reconcile-rate: medium
+    apps.open-cluster-management.io/reconcile-rate: high
 spec:
   type: GitHub
   pathname: https://github.com/bjoydeep/fleet-configuration.git
