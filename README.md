@@ -34,6 +34,8 @@
     kubectl apply -k deploy-to-acm-hub
     ```
 
+    Note: The local placement syntax used in this example works even when self management is disabled in ACM hub.   
+
 ### If deploying into Global Hub
 1. 
     ```
