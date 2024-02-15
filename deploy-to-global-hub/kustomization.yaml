@@ -8,5 +8,5 @@ resources:
   - channel.yaml
   - subscription.yaml
   - managedclustersetbinding.yaml
-  - placement.yaml
+#  - placement.yaml
   - app.yaml
