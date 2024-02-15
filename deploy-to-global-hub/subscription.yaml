@@ -12,6 +12,4 @@ metadata:
 spec:
   channel: policy-repo/channel-for-policy-repo
   placement:
-    placementRef:
-      kind: Placement
-      name: placement-for-policy-repo    
+    local: true
