@@ -1,7 +1,7 @@
 apiVersion: cluster.open-cluster-management.io/v1beta2
 kind: ManagedClusterSetBinding
 metadata:
-  namespace: policy-repo
+  namespace: global-app
   name: global
 spec:
   clusterSet: global

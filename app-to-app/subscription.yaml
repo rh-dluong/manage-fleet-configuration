@@ -8,9 +8,9 @@ metadata:
   labels:
     app: app-for-app-policy-repo
   name: sub-for-app-policy-repo
-  namespace: policy-repo
+  namespace: global-app
 spec:
-  channel: policy-repo/channel-for-app-policy-repo
+  channel: global-app/channel-for-app-policy-repo
   placement:
     placementRef:
       kind: Placement

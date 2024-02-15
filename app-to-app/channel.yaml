@@ -4,7 +4,7 @@ metadata:
   annotations:
     apps.open-cluster-management.io/reconcile-rate: high
   name: channel-for-app-policy-repo
-  namespace: policy-repo
+  namespace: global-app
 spec:
   type: Git
   pathname: 'https://github.com/rh-dluong/manage-fleet-configuration.git'  

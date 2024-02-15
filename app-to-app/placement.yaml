@@ -4,7 +4,7 @@ metadata:
   labels:
     app: app-for-policy-repo
   name: placement-for-app-policy-repo
-  namespace: policy-repo
+  namespace: global-app
 spec:
   predicates:
     - requiredClusterSelector:
