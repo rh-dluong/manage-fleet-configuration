@@ -10,5 +10,4 @@ spec:
     - requiredClusterSelector:
         labelSelector:
           matchExpressions:
-  clusterSets:
-    - global
+          - {key: local-cluster, operator: NotIn, values: ["true"]}
